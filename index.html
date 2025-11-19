@@ -700,6 +700,29 @@
   </style>
 </head>
 <body>
+  <button id="playMusic" style="
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 12px 20px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  background: #ffcc00;
+  cursor: pointer;
+  z-index: 9999;">
+  🎵 Пусни музика
+</button>
+
+<audio id="bgMusic" src="let-it-be.mp3" preload="auto"></audio>
+
+<script>
+document.getElementById("playMusic").addEventListener("click", function () {
+    document.getElementById("bgMusic").play();
+    this.style.display = "none";
+});
+</script>
+
   <div class="background-orbit">
     <div class="orbit-circle"></div>
     <div class="orbit-circle"></div>
